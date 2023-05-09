@@ -34,7 +34,7 @@ class Decode:
     def b64():
         pass
 
-    async def b64():
+    async def async_b64():
         pass
 
 
@@ -68,6 +68,7 @@ def get_version(
         branch: str = "main",
 ):
     return GetCode(user, repo, branch, file).get_version
+
 
 async def async_get_version(
         user: str,
