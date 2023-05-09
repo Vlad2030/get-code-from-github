@@ -1,7 +1,8 @@
 import base64
+
+import aiohttp
 import httpx
 import orjson
-import aiohttp
 
 
 class Request:
