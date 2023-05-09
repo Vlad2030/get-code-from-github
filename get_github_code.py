@@ -43,7 +43,7 @@ class GetCode:
             user: str,
             repo: str,
             branch: str,
-            file: str
+            file: str,
     ) -> None:
         self.user: str = user
         self.repo: str = repo
@@ -51,25 +51,27 @@ class GetCode:
         self.file: str = file
         self.url: str = "https://api.github.com/repos/{}/{}/contents/{}?ref={}"
 
+    @property
     def get_version():
         pass
 
-    async def get_version():
+    @property
+    async def async_get_version():
         pass
 
 
 def get_version(
         user: str,
         repo: str,
-        branch: str,
-        file: str
+        file: str,
+        branch: str = "main",
 ):
-    pass
+    return GetCode(user, repo, branch, file).get_version
 
-def async_get_version(
+async def async_get_version(
         user: str,
         repo: str,
-        branch: str,
-        file: str
+        file: str,
+        branch: str = "main",
 ):
-    pass
+    return await GetCode(user, repo, branch, file).async_get_version
