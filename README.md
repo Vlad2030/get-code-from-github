@@ -16,14 +16,19 @@ this is a small python code to get code from github repositories
  ```
  or
   ```python
+ import asyncio
  from get_github_code import async_get_code
  
- code = await async_get_code(
-     user="Vlad2030",
-     repo="get-code-from-github",
-     branch="main",
-     file="get_github_code.py",
- )
+ async def main() -> None:
+     code = await async_get_code(
+         user="Vlad2030",
+         repo="get-code-from-github",
+         branch="main",
+         file="get_github_code.py",
+     )
  
- print(code)
+     print(code)
+ 
+ if __name__ == "__main__":
+     asyncio.run(main())
  ```
