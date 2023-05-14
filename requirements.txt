@@ -1,5 +1,5 @@
 base64
-httpx
+urllib3
 aiohttp
 acynsio
 orjson
