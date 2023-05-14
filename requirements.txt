@@ -1,5 +1,5 @@
+urllib3==1.26.5
+aiohttp==3.8.3
+asyncio==3.4.3
+orjson==3.5.2
 base64
-urllib3
-aiohttp
-acynsio
-orjson
