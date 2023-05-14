@@ -77,8 +77,11 @@ asyncio.run(main())
 
 ## Documentation
 [How to install](https://github.com/Vlad2030/get-code-from-github/blob/main/docs/install.md)
+
 [Classes/GetCode](https://github.com/Vlad2030/get-code-from-github/blob/main/docs/classes/GetCode.md)
+
 [functions/get_code](https://github.com/Vlad2030/get-code-from-github/blob/main/docs/functions/get_code.md)
+
 [functions/async_get_code](https://github.com/Vlad2030/get-code-from-github/blob/main/docs/functions/async_get_code.md)
 
 
