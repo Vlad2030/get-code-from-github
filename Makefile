@@ -1,7 +1,7 @@
 # ============================================VARIABLES===========================================
 LIBDIR			= get_github_code
 EXAMPLSDIR		= examples
-code_directory	= $(LIBDIR) $(EXAMPLSDIR)
+CODEDIR	= $(LIBDIR) $(EXAMPLSDIR)
 SPHINXOPTS		?=
 SPHINXBUILD		?= docs/sphinx-build
 SOURCEDIR		= docs
@@ -11,16 +11,16 @@ BUILDDIR		= docs/_build
 # ==============================================CODE==============================================
 .PHONY: lint
 lint:
-	isort --check-only $(code_directory)
-	black --check --diff $(code_directory)
-	ruff $(code_directory)
+	isort --check-only $(CODEDIR)
+	black --check --diff $(CODEDIR)
+	ruff $(CODEDIR)
 	mypy $(application_directory)
 
 .PHONY: reformat
 reformat:
-	black $(code_directory)
-	isort $(code_directory)
-	ruff --fix $(code_directory)
+	black $(CODEDIR)
+	isort $(CODEDIR)
+	ruff --fix $(CODEDIR)
 # ==============================================CODE==============================================
 
 # =============================================SPHINX============================================= 
