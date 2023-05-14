@@ -1,5 +1,6 @@
-## Get code from GitHub
 [![CodeFactor](https://www.codefactor.io/repository/github/vlad2030/get-code-from-github/badge/main)](https://www.codefactor.io/repository/github/vlad2030/get-code-from-github/overview/main)
+
+## Get code from GitHub
 this is a small python code to get code from github repositories
 
 ## How to install
