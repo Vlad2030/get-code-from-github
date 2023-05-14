@@ -9,7 +9,6 @@ class JSON:
 
     @staticmethod
     def loads(
-            self,
             data: typing.Union[bytes, bytearray, memoryview, str],
     ) -> typing.Any:
         return orjson.loads(data)

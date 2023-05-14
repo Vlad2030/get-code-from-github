@@ -1,3 +1,11 @@
+from get_github_code.get_code import get_code, async_get_code
+
+__all__ = [
+    "get_code",
+    "async_get_code",
+]
+
+'''
 from get_github_code.json import JSON
 from get_github_code.get_code import GetCode
 from get_github_code.constants import API_URL
@@ -13,19 +21,4 @@ __all__ = [
     "GetCode",
     "Request",
 ]
-
-def get_version(
-        user: str,
-        repo: str,
-        file: str,
-        branch: str = "main",
-) -> str:
-    return GetCode(user, repo, branch, file).get_version
-
-async def async_get_version(
-        user: str,
-        repo: str,
-        file: str,
-        branch: str = "main",
-):
-    return await GetCode(user, repo, branch, file).async_get_version
+'''

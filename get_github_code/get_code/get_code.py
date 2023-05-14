@@ -1,4 +1,8 @@
-from get_github_code import API_URL, JSON, Decode, GetCodeException, Request
+from get_github_code.constants import API_URL
+from get_github_code.json import JSON
+from get_github_code.decode import Decode
+from get_github_code.exceptions import GetCodeException
+from get_github_code.request import Request
 
 
 class GetCode(Request, JSON, Decode):
@@ -17,17 +21,34 @@ class GetCode(Request, JSON, Decode):
                                        self.file, self.branch)
 
     @property
-    def get_version(self) -> str:
-        response = self.request(url=self.url)
+    def get_code(self) -> str:
+        response = self.request(url=self.url)._body.decode("utf-8")
         if not response.status == 200:
             raise GetCodeException("Connection refused")
-        json = self.loads(data=response)
+        json = self.loads(data=response)["content"]
         return self.b64(data=json)
 
     @property
-    async def async_get_version(self) -> str:
-        response = await self.async_request(url=self.url)
+    async def async_get_code(self) -> str:
+        response = await self.async_request(url=self.url)._body.decode("utf-8")
         if not response.status == 200:
             raise GetCodeException("Connection refused")
-        json = self.loads(data=response)
+        json = self.loads(data=response)["content"]
         return self.b64(data=json)
+
+
+def get_code(
+        user: str,
+        repo: str,
+        file_path: str,
+        branch: str = "main",
+) -> str:
+    return GetCode(user, repo, branch, file_path).get_code
+
+async def async_get_code(
+        user: str,
+        repo: str,
+        file_path: str,
+        branch: str = "main",
+):
+    return await GetCode(user, repo, branch, file_path).async_get_code
