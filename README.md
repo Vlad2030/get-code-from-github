@@ -1,6 +1,8 @@
+## Get code from GitHub
+[![pypi](https://img.shields.io/pypi/v/get_github_code)](https://pypi.org/project/get-github-code/)
+[![](https://img.shields.io/pypi/pyversions/get_github_code)](https://pypi.org/project/get-github-code/)
 [![CodeFactor](https://www.codefactor.io/repository/github/vlad2030/get-code-from-github/badge/main)](https://www.codefactor.io/repository/github/vlad2030/get-code-from-github/overview/main)
 
-## Get code from GitHub
 this is a small python library to get code from github repositories
 
 ## How to install
@@ -22,7 +24,7 @@ code = get_code(
 )
 
 print(code)
-# 0.1
+# 0.2
 ```
 
 or asynchronous
@@ -42,7 +44,7 @@ async def main() -> None:
     print(code)
 
 asyncio.run(main())
-# 0.1
+# 0.2
 ```
 
 additionally you can through the class by calling property
@@ -59,7 +61,7 @@ file = GetCode(
 )
 
 print(file.get_code)
-# 0.1
+# 0.2
 
 async def main() -> None:
     file = GetCode(
@@ -72,7 +74,7 @@ async def main() -> None:
     print(file.async_get_code)
 
 asyncio.run(main())
-# 0.1
+# 0.2
 ```
 
 ## Documentation
@@ -85,4 +87,4 @@ asyncio.run(main())
 [functions/async_get_code](https://github.com/Vlad2030/get-code-from-github/blob/main/docs/functions/async_get_code.md)
 
 
-> 2023, version 0.0.1
+> 2023, version 0.2
