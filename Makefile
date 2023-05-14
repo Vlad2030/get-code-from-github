@@ -1,7 +1,11 @@
 # ============================================VARIABLES===========================================
-lib_directory = get_github_code
-examples_directory = examples
-code_directory = $(lib_directory) $(examples_directory)
+LIBDIR			= get_github_code
+EXAMPLSDIR		= examples
+code_directory	= $(LIBDIR) $(EXAMPLSDIR)
+SPHINXOPTS		?=
+SPHINXBUILD		?= docs/sphinx-build
+SOURCEDIR		= docs
+BUILDDIR		= docs/_build
 # ============================================VARIABLES===========================================
 
 # ==============================================CODE==============================================
@@ -20,17 +24,6 @@ reformat:
 # ==============================================CODE==============================================
 
 # =============================================SPHINX============================================= 
-# Minimal makefile for Sphinx documentation
-#
-
-# You can set these variables from the command line, and also
-# from the environment for the first two.
-SPHINXOPTS    ?=
-SPHINXBUILD   ?= docs/sphinx-build
-SOURCEDIR     = docs
-BUILDDIR      = docs/_build
-
-# Put it first so that "make" without argument is like "make help".
 .PHONY: help
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
