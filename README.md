@@ -24,7 +24,7 @@ code = get_code(
 )
 
 print(code)
-# 0.2
+# 0.2.1
 ```
 
 or asynchronous
@@ -44,7 +44,7 @@ async def main() -> None:
     print(code)
 
 asyncio.run(main())
-# 0.2
+# 0.2.1
 ```
 
 additionally you can through the class by calling property
@@ -61,7 +61,7 @@ file = GetCode(
 )
 
 print(file.get_code)
-# 0.2
+# 0.2.1
 
 async def main() -> None:
     file = GetCode(
@@ -74,7 +74,7 @@ async def main() -> None:
     print(file.async_get_code)
 
 asyncio.run(main())
-# 0.2
+# 0.2.1
 ```
 
 ## Documentation
@@ -87,4 +87,4 @@ asyncio.run(main())
 [functions/async_get_code](https://github.com/Vlad2030/get-code-from-github/blob/main/docs/functions/async_get_code.md)
 
 
-> 2023, version 0.2
+> 2023, version 0.2.1
