@@ -1,0 +1,59 @@
+[project]
+name = "get_github_code"
+
+
+[tool.poetry]
+name = "get_github_code"
+version = "0.1"
+description = "a small python library to get code from github repositories."
+authors = ["vladdd0 <vlad123123v@gmail.com>"]
+license = "GNU"
+readme = "README.md"
+homepage = "https://github.com/Vlad2030/get-code-from-github"
+repository = "https://github.com/Vlad2030/get-code-from-github"
+documentation = "https://get-code-from-github.readthedocs.io/en/latest/"
+packages = [
+    { include="get_github_code" }
+]
+keywords = [
+    "urllib3",
+    "aiohttp",
+    "asyncio",
+    "orjson",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Plugins",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+    "Framework :: AsyncIO",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.7.0"
+urllib3 = ">=1.26.5"
+aiohttp = ">=3.8.3"
+orjson = ">=3.5.2"
+asyncio = { version = ">=3.4.3", optional = true}
+
+
+[tool.poetry.extras]
+orjson = ["orjson"]
+all = [
+    "orjson",
+]
+
+
+[tool.yapf]
+based_on_style = "pep8"
+disable_ending_comma_heuristic = true
+split_arguments_when_comma_terminated = true
