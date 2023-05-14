@@ -7,7 +7,7 @@ code = get_code(
     file_path="VERSION",
 )
 print(code)
-# 0.2
+# 0.2.1
 
 file = GetCode(
     user="Vlad2030",
@@ -16,4 +16,4 @@ file = GetCode(
     file_path="VERSION",
 )
 print(file.get_code)
-# 0.2
+# 0.2.1
