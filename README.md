@@ -13,6 +13,7 @@ code = get_code(
 )
 
 print(code)
+# 0.0.1
 ```
 
 or
@@ -26,11 +27,13 @@ async def main() -> None:
         user="Vlad2030",
         repo="get-code-from-github",
         branch="main",
-        file_path="get_github_code.py",
+        file_path="VERSION",
     )
 
     print(code)
 
 if __name__ == "__main__":
     asyncio.run(main())
+    # 0.0.1
 ```
+> 2023, version 0.0.1
