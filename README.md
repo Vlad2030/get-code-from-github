@@ -2,6 +2,7 @@
 [![pypi](https://img.shields.io/pypi/v/get_github_code)](https://pypi.org/project/get-github-code/)
 [![](https://img.shields.io/pypi/pyversions/get_github_code)](https://pypi.org/project/get-github-code/)
 [![CodeFactor](https://www.codefactor.io/repository/github/vlad2030/get-code-from-github/badge/main)](https://www.codefactor.io/repository/github/vlad2030/get-code-from-github/overview/main)
+[![Downloads](https://static.pepy.tech/badge/get-github-code)](https://pepy.tech/project/get-github-code)
 
 this is a small python library to get code from github repositories
 
